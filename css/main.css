@@ -1,0 +1,26 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.level-button {
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    background-color: blue;
+    margin: 0 auto;
+}
+
+.cell {
+    background-color: pink;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    border-color: firebrick;
+}
+
+table {
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+}
