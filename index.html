@@ -11,10 +11,23 @@
 <body onload="init()" oncontextmenu="return false">
     <h1>MINE SWEEPER</h1>
     <hr/>
-    <div class="level-button">
-        <button onclick="eazyBoard()">Eazy</button>
-        <button onclick="hardBoard()">Hard</button>
-        <button onclick="expertBoard()">EXPERT</button>
+
+
+
+
+    <div class="modal">
+        <div class="time">TIME:
+            <div class="timer"> </div>
+        </div>
+        <button class="level-button" onclick="eazyBoard()">EAZY</button>
+        <button class="level-button" onclick="hardBoard()">HARD</button>
+        <button class="level-button" onclick="expertBoard()">EXPERT</button>
+        <div class="restart"><button onclick="init()">&#128512;</button></div>
+
+        <div class="hint"><button class="hint1" onclick="setClue(this)">&#9757;&#127995;</button></div>
+        <div class="hint"><button class="hint2" onclick="setClue(this)">&#9757;&#127995;</button></div>
+        <div class="hint"><button class="hint3" onclick="setClue(this)">&#9757;&#127995;</button></div>
+
     </div>
 
     <table>
@@ -24,8 +37,6 @@
         </tbody>
 
     </table>
-
-    <script src="js/Functions.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
     <script></script>

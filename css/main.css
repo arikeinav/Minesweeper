@@ -3,24 +3,102 @@ h1 {
     text-align: center;
 }
 
-.level-button {
-    width: 400px;
+body {
+    background-color: silver
+}
+
+.modal {
+    width: 1000px;
     height: 100px;
     text-align: center;
-    background-color: blue;
+    background-color: black;
     margin: 0 auto;
+    margin-top: 0px;
 }
 
 .cell {
-    background-color: pink;
-    height: 70px;
-    width: 70px;
+    background-color: green;
+    height: 38px;
+    width: 38px;
     text-align: center;
-    border-color: firebrick;
+    border: solid black 1px;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 table {
-    margin: 0 auto;
-    height: 400px;
-    width: 400px;
+    margin-top: 0px;
+    margin-left: 510px;
+    height: 480px;
+    width: 480px;
+}
+
+.restart button {
+    background-color: blueviolet;
+    margin-left: 370px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    border: solid gray 3px;
+    border-radius: 5px;
+}
+
+.time {
+    width: 100px;
+    height: 50px;
+    background-color: lightseagreen;
+    margin-right: 500px;
+    text-align: left;
+    text-align: center;
+}
+
+.level-button {
+    float: right;
+    margin: 20px;
+    margin-top: 0px;
+    cursor: pointer;
+    height: 40px;
+    width: 90px;
+    border: solid gray 3px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.hint {
+    float: left;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.hint1 {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    cursor: pointer;
+    border: solid gray 3px;
+    border-radius: 5px;
+}
+
+.hint2 {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    cursor: pointer;
+    border: solid gray 3px;
+    border-radius: 5px;
+}
+
+.hint3 {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    cursor: pointer;
+    border: solid gray 3px;
+    border-radius: 5px;
 }
