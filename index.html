@@ -4,17 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mine Sweeper</title>
+    <title>MineSweeper</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body onload="init()" oncontextmenu="return false">
-    <h1>MINE SWEEPER</h1>
-    <hr/>
-
-
-
-
+    <h1>MINESWEEPER</h1>
+    <h2>LETS FIND SOME MINES!!!</h2>
     <div class="modal">
         <div class="time">TIME:
             <div class="timer"> </div>
@@ -27,20 +23,14 @@
         <div class="hint"><button class="hint1" onclick="setClue(this)">&#9757;&#127995;</button></div>
         <div class="hint"><button class="hint2" onclick="setClue(this)">&#9757;&#127995;</button></div>
         <div class="hint"><button class="hint3" onclick="setClue(this)">&#9757;&#127995;</button></div>
-
     </div>
-
     <table>
         <tbody class="gameboard">
-
-
         </tbody>
-
     </table>
+
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
-    
-
 </body>
 
 </html>

@@ -8,8 +8,6 @@ const WIN = '&#128526';
 const CLUE = '&#9757'
 const CLUES = '&#9757;&#127995'
 
-
-
 var gClicked
 var gBoard = [];
 var gTime = 0
@@ -43,8 +41,8 @@ function init() {
         isClue: false
     }
     gBoard = createBoard(gLevel.size);
-
     renderBoard(gBoard)
+    resultMsg('LETS FIND SOME MINES!!!')
 }
 
 function createBoard(size) {
@@ -75,7 +73,7 @@ function renderBoard(board) {
             } else if (!board[i][j].isShown && board[i][j].gameElement === FLAG) {
                 htmlStr += `<td class = "cell" onmousedown="WhichButton(event, ${i},${j})" onclick = "cellClick(this, ${i} , ${j})">${board[i][j].gameElement} </td>`;
             } else {
-                htmlStr += `<td class = "cell" style="background-color:gray;" onclick = "cellClick(this, ${i} , ${j})">${board[i][j].type} </td>`;
+                htmlStr += `<td class = "cell" style="background-color:silver;" onclick = "cellClick(this, ${i} , ${j})">${board[i][j].type} </td>`;
             }
         }
         htmlStr += '</tr>'
@@ -196,13 +194,12 @@ function gameOver() {
         for (var j = 0; j < gBoard[i].length; j++) {
             gBoard[i][j].isShown = true;
             gGame.isOn = false
-
             var restartButton = document.querySelector('.restart button');
             restartButton.innerHTML = LOSS
             clearInterval(gTimeInterval)
         }
     }
-    alert('YOU LOSE!!!')
+    resultMsg('YOU LOSE!!!')
     renderBoard(gBoard)
 }
 
@@ -264,11 +261,12 @@ function checkVictory() {
         }
     }
     if ((gGame.shownCount === (gLevel.size ** 2) - gLevel.mines) && (gGame.markedCount === gLevel.mines)) {
-        alert('Good Job!!!');
+        resultMsg('WOW!!! YOU DID IT IN ' + gTime + ' sec')
         gGame.isOn = false
         var restartButton = document.querySelector('.restart button');
         restartButton.innerHTML = WIN
         clearInterval(gTimeInterval)
+        console.log(gTime)
         renderBoard(gBoard)
     }
     gGame.shownCount = 0
@@ -304,4 +302,11 @@ function deleteClue() {
         elClue.classList.remove('light')
         gClicked = false
     }
+}
+
+
+function resultMsg(txt) {
+    var elMsg = document.querySelector('h2')
+    elMsg.innerText = txt
+
 }
