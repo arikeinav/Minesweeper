@@ -22,24 +22,23 @@ body {
 }
 
 .modal {
-    width: 900px;
-    height: 100px;
+   position: relative;
+    height: 70px;
     text-align: center;
     background-color: royalblue;
-    margin: 0 auto;
-    margin-top: 0px;
     border: solid silver 1px;
     border-radius: 5px;
+    
 }
 
 .cell {
     background-color: blueviolet;
-    height: 39px;
-    width: 39px;
     text-align: center;
     border: solid black 1px;
     font-size: 25px;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
 .cell:hover {
@@ -47,17 +46,14 @@ body {
 }
 
 table {
-    margin-top: 0px;
-    margin-left: 510px;
-    height: 480px;
-    width: 480px;
+    margin:auto;
+
     background-color: black;
+    margin-top: 15px;
 }
 
-.restart button {
-    position: relative;
+ button {
     background-color: blueviolet;
-    margin-left: 370px;
     width: 100px;
     height: 50px;
     text-align: center;
@@ -66,6 +62,10 @@ table {
     border: solid gray 3px;
     border-radius: 5px;
     bottom: 10px;
+    margin: auto;
+}
+.btn{
+    margin-top: 10px;
 }
 
 .time {
@@ -78,14 +78,14 @@ table {
     border: solid gray 3px;
     border-radius: 5px;
     font-size: 20px;
-    position: relative;
+    position: absolute;
     left: 20px;
     top: 10px;
 }
 
 .level-button {
     float: right;
-    margin: 20px;
+    margin: 10px;
     margin-top: 0px;
     cursor: pointer;
     height: 40px;
@@ -104,10 +104,19 @@ table {
 }
 
 .hint {
-    float: left;
+
     width: 50px;
     height: 50px;
     text-align: center;
+}
+.levels{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.hints{
+    display: flex;
+    justify-content: center;
 }
 
 .hint1 {
@@ -144,4 +153,25 @@ table {
     font-size: 50px;
     margin-bottom: 800px;
     font-weight: bold;
+}
+
+@media (max-width:350px){
+    .cell {
+        
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+    }
+    button {
+        width: 70px;
+        height: 40px;
+        font-size: 25px;
+      
+    }
+    .time{
+        width: 80px;
+        height: 40px;
+        font-size: 14px;
+    }
+   
 }

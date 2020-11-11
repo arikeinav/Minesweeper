@@ -194,7 +194,7 @@ function gameOver() {
         for (var j = 0; j < gBoard[i].length; j++) {
             gBoard[i][j].isShown = true;
             gGame.isOn = false
-            var restartButton = document.querySelector('.restart button');
+            var restartButton = document.querySelector('.btn');
             restartButton.innerHTML = LOSS
             clearInterval(gTimeInterval)
         }
@@ -248,7 +248,7 @@ function WhichButton(event, i, j) {
 }
 
 function resetButton() {
-    var restartButton = document.querySelector('.restart button');
+    var restartButton = document.querySelector('.btn');
     restartButton.innerHTML = '&#128512'
 }
 
@@ -263,7 +263,7 @@ function checkVictory() {
     if ((gGame.shownCount === (gLevel.size ** 2) - gLevel.mines) && (gGame.markedCount === gLevel.mines)) {
         resultMsg('WOW!!! YOU DID IT IN ' + gTime + ' sec')
         gGame.isOn = false
-        var restartButton = document.querySelector('.restart button');
+        var restartButton = document.querySelector('.btn');
         restartButton.innerHTML = WIN
         clearInterval(gTimeInterval)
         console.log(gTime)
@@ -303,7 +303,6 @@ function deleteClue() {
         gClicked = false
     }
 }
-
 
 function resultMsg(txt) {
     var elMsg = document.querySelector('h2')

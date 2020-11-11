@@ -10,16 +10,21 @@
 
 <body onload="init()" oncontextmenu="return false">
     <h1>MINESWEEPER</h1>
-    <h2>LETS FIND SOME MINES!!!</h2>
+    <h2>Lets find some mines</h2>
+    
     <div class="modal">
         <div class="time">TIME:
             <div class="timer"> </div>
         </div>
+        <button class="btn" onclick="init()">&#128512;</button>
+
+    </div>
+    <div class="levels">
         <button class="level-button" onclick="eazyBoard()">EAZY</button>
         <button class="level-button" onclick="hardBoard()">HARD</button>
         <button class="level-button" onclick="expertBoard()">EXPERT</button>
-        <div class="restart"><button onclick="init()">&#128512;</button></div>
-
+    </div>
+    <div class="hints">
         <div class="hint"><button class="hint1" onclick="setClue(this)">&#9757;&#127995;</button></div>
         <div class="hint"><button class="hint2" onclick="setClue(this)">&#9757;&#127995;</button></div>
         <div class="hint"><button class="hint3" onclick="setClue(this)">&#9757;&#127995;</button></div>
